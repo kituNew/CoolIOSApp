@@ -1,0 +1,26 @@
+# swiftgen.yml
+input_dir: .
+output_dir: Sources/Generated
+
+# 1. Изображения
+images:
+  inputs: Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: Sources/Generated/Assets.swift
+      params:
+        forceTheme: light
+
+# 2. Цвета (в формате JSON)
+colors:
+  inputs: Colors.json
+  outputs:
+    - templateName: swift5
+      output: Sources/Generated/Colors.swift
+
+# 3. Локализация
+strings:
+  inputs: en.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: Sources/Generated/Strings.swift

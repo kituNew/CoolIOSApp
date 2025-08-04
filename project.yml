@@ -1,0 +1,37 @@
+# project.yml
+name: MyCoolApp
+options:
+  bundleIdPrefix: com.yourcompany
+  
+packages:
+  SnapKit:
+    url: https://github.com/SnapKit/SnapKit.git
+    from: 5.6.0
+
+targets:
+  MyCoolApp:
+    type: application
+    platform: iOS
+    deploymentTarget: "18.0"
+    sources: Sources
+    resources: Resources/**
+    info:
+      path: Sources/Info.plist
+    settings:
+      base:
+        DEVELOPMENT_TEAM: Влад Зайцев
+    dependencies:
+      - sdk: UIKit.framework
+      - sdk: Foundation.framework
+      - package: SnapKit
+        product: SnapKit
+    scripts:
+      - name: SwiftGen
+        script: |
+          mkdir -p Sources/Generated
+          if which swiftgen > /dev/null; then
+            swiftgen
+          else
+            echo "warning: SwiftGen не установлен. Установи через 'brew install swiftgen'"
+          fi
+        ordering: before_compile
