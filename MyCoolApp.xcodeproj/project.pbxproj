@@ -3,27 +3,50 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		119149122E22F2DE53B3CB38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8E9115C39F1CE6D134FB7 /* UIKit.framework */; };
-		3194D1C42E40CF8E000E1D0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1C32E40CF80000E1D0B /* ViewController.swift */; };
-		4B01AE17B26688E4A9669DF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C185EA4F52360C2044420464 /* SceneDelegate.swift */; };
+		3194D1E12E45071B000E1D0B /* Endpoint&DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1D92E45071B000E1D0B /* Endpoint&DTO.swift */; };
+		3194D1E22E45071B000E1D0B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1D62E45071B000E1D0B /* HTTPMethod.swift */; };
+		3194D1E32E45071B000E1D0B /* HTTPCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1D52E45071B000E1D0B /* HTTPCode.swift */; };
+		3194D1E42E45071B000E1D0B /* NetworkServicingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1DD2E45071B000E1D0B /* NetworkServicingProtocol.swift */; };
+		3194D1E52E45071B000E1D0B /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1DF2E45071B000E1D0B /* RemoteImageView.swift */; };
+		3194D1E62E45071B000E1D0B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1DA2E45071B000E1D0B /* NetworkError.swift */; };
+		3194D1E72E45071B000E1D0B /* APIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1D82E45071B000E1D0B /* APIRoutes.swift */; };
+		3194D1E82E45071B000E1D0B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1DC2E45071B000E1D0B /* NetworkService.swift */; };
+		3194D1E92E45071B000E1D0B /* PascalToCamelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1DE2E45071B000E1D0B /* PascalToCamelConverter.swift */; };
+		3194D1EE2E450767000E1D0B /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1EC2E450767000E1D0B /* LocalStorageManager.swift */; };
+		3194D1EF2E450767000E1D0B /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1EA2E450767000E1D0B /* StorageType.swift */; };
 		A24D4F22CFE98C2AAA011C40 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8894172F9F97B7C3EAB648C5 /* SnapKit */; };
-		D2F32F9A3A6952D4CD82F87D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6AB098A85E586A0A55E327 /* AppDelegate.swift */; };
 		E40AC0CB6C006C2453B25CC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ECB48E74F9E1816C0C1E10 /* Foundation.framework */; };
+		F77CA2E3FE2502333891185D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4BF5D0B7E048D6E1407532 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11ECB48E74F9E1816C0C1E10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3194D1C32E40CF80000E1D0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3194D1D52E45071B000E1D0B /* HTTPCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCode.swift; sourceTree = "<group>"; };
+		3194D1D62E45071B000E1D0B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		3194D1D82E45071B000E1D0B /* APIRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoutes.swift; sourceTree = "<group>"; };
+		3194D1D92E45071B000E1D0B /* Endpoint&DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint&DTO.swift"; sourceTree = "<group>"; };
+		3194D1DA2E45071B000E1D0B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		3194D1DC2E45071B000E1D0B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3194D1DD2E45071B000E1D0B /* NetworkServicingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicingProtocol.swift; sourceTree = "<group>"; };
+		3194D1DE2E45071B000E1D0B /* PascalToCamelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PascalToCamelConverter.swift; sourceTree = "<group>"; };
+		3194D1DF2E45071B000E1D0B /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
+		3194D1EA2E450767000E1D0B /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
+		3194D1EC2E450767000E1D0B /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
 		36EF5F516A68ABE0735D348F /* MyCoolApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MyCoolApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF8E9115C39F1CE6D134FB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		60CC3F141854B08267E30C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		6F6AB098A85E586A0A55E327 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C185EA4F52360C2044420464 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		60CC3F141854B08267E30C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB4BF5D0B7E048D6E1407532 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3194D1C52E450126000E1D0B /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
+		3194D1C92E450216000E1D0B /* Screans */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Screans; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2700C66CE9CB31BBF375640A /* Frameworks */ = {
@@ -39,6 +62,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3194D1D72E45071B000E1D0B /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				3194D1D52E45071B000E1D0B /* HTTPCode.swift */,
+				3194D1D62E45071B000E1D0B /* HTTPMethod.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		3194D1DB2E45071B000E1D0B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3194D1D72E45071B000E1D0B /* HTTP */,
+				3194D1D82E45071B000E1D0B /* APIRoutes.swift */,
+				3194D1D92E45071B000E1D0B /* Endpoint&DTO.swift */,
+				3194D1DA2E45071B000E1D0B /* NetworkError.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3194D1E02E45071B000E1D0B /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				3194D1DB2E45071B000E1D0B /* Data */,
+				3194D1DC2E45071B000E1D0B /* NetworkService.swift */,
+				3194D1DD2E45071B000E1D0B /* NetworkServicingProtocol.swift */,
+				3194D1DE2E45071B000E1D0B /* PascalToCamelConverter.swift */,
+				3194D1DF2E45071B000E1D0B /* RemoteImageView.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		3194D1EB2E450767000E1D0B /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				3194D1EA2E450767000E1D0B /* StorageType.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		3194D1ED2E450767000E1D0B /* DataStoring */ = {
+			isa = PBXGroup;
+			children = (
+				3194D1EB2E450767000E1D0B /* Types */,
+				3194D1EC2E450767000E1D0B /* LocalStorageManager.swift */,
+			);
+			path = DataStoring;
+			sourceTree = "<group>";
+		};
 		48F7FA2B67B6F8AB15294A8D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -50,10 +122,12 @@
 		66EB515A7B81E5217AF5CCE8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3194D1C32E40CF80000E1D0B /* ViewController.swift */,
-				6F6AB098A85E586A0A55E327 /* AppDelegate.swift */,
+				3194D1ED2E450767000E1D0B /* DataStoring */,
+				3194D1E02E45071B000E1D0B /* NetworkService */,
+				3194D1C92E450216000E1D0B /* Screans */,
+				3194D1C52E450126000E1D0B /* App */,
+				FB4BF5D0B7E048D6E1407532 /* ViewController.swift */,
 				60CC3F141854B08267E30C89 /* Info.plist */,
-				C185EA4F52360C2044420464 /* SceneDelegate.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -89,6 +163,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3194D1C52E450126000E1D0B /* App */,
+				3194D1C92E450216000E1D0B /* Screans */,
 			);
 			name = MyCoolApp;
 			packageProductDependencies = (
@@ -138,9 +216,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3194D1C42E40CF8E000E1D0B /* ViewController.swift in Sources */,
-				D2F32F9A3A6952D4CD82F87D /* AppDelegate.swift in Sources */,
-				4B01AE17B26688E4A9669DF0 /* SceneDelegate.swift in Sources */,
+				3194D1EE2E450767000E1D0B /* LocalStorageManager.swift in Sources */,
+				3194D1EF2E450767000E1D0B /* StorageType.swift in Sources */,
+				F77CA2E3FE2502333891185D /* ViewController.swift in Sources */,
+				3194D1E12E45071B000E1D0B /* Endpoint&DTO.swift in Sources */,
+				3194D1E22E45071B000E1D0B /* HTTPMethod.swift in Sources */,
+				3194D1E32E45071B000E1D0B /* HTTPCode.swift in Sources */,
+				3194D1E42E45071B000E1D0B /* NetworkServicingProtocol.swift in Sources */,
+				3194D1E52E45071B000E1D0B /* RemoteImageView.swift in Sources */,
+				3194D1E62E45071B000E1D0B /* NetworkError.swift in Sources */,
+				3194D1E72E45071B000E1D0B /* APIRoutes.swift in Sources */,
+				3194D1E82E45071B000E1D0B /* NetworkService.swift in Sources */,
+				3194D1E92E45071B000E1D0B /* PascalToCamelConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

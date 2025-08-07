@@ -14,7 +14,7 @@ targets:
     platform: iOS
     deploymentTarget: "18.0"
     sources: Sources
-    resources: Resources/**
+    resources: Resources
     info:
       path: Sources/Info.plist
     settings:

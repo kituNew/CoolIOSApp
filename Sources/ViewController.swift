@@ -16,10 +16,10 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .blue
         view.addSubview(label)
-        label.text = "Hello SnapKit!"
+        label.text = "Hello!"
 
         label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 20)
+        label.font = .systemFont(ofSize: 20)
         label.textAlignment = .center
 
         label.snp.makeConstraints { make in
