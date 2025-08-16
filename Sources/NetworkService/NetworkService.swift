@@ -44,7 +44,13 @@ final class NetworkService: NetworkServicing {
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         urlComponents?.path = endpoint.path
 
-        guard let url = urlComponents?.url else {
+        guard var components = urlComponents else {
+            throw NetworkError.internalError
+        }
+
+        applyQueryParameters(to: &components, queryParameters: endpoint.queryParameters)
+
+        guard let url = components.url else {
             throw NetworkError.internalError
         }
 
@@ -62,13 +68,20 @@ final class NetworkService: NetworkServicing {
 
         return urlRequest
     }
-
+    
     private func applyHeaders(to request: inout URLRequest, headers: [String: String]?) {
         if let headers = headers {
             for (key, value) in headers {
                 request.setValue(value, forHTTPHeaderField: key)
             }
         }
+    }
+    
+    private func applyQueryParameters(to urlComponents: inout URLComponents, queryParameters: [String: String]?) {
+        guard let queryParameters = queryParameters, !queryParameters.isEmpty else { return }
+        
+        let queryItems = queryParameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+        urlComponents.queryItems = (urlComponents.queryItems ?? []) + queryItems
     }
 
     private func configureRequestBody<Request: Encodable>(

@@ -12,6 +12,7 @@ protocol Endpoint {
     var path: String { get }
     var method: String { get }
     var headers: [String: String]? { get }
+    var queryParameters: [String: String]? { get }
 }
 
 protocol RequestDTO: Encodable {}

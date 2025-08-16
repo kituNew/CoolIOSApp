@@ -21,7 +21,6 @@
 		3194D1EF2E450767000E1D0B /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1EA2E450767000E1D0B /* StorageType.swift */; };
 		A24D4F22CFE98C2AAA011C40 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8894172F9F97B7C3EAB648C5 /* SnapKit */; };
 		E40AC0CB6C006C2453B25CC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ECB48E74F9E1816C0C1E10 /* Foundation.framework */; };
-		F77CA2E3FE2502333891185D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4BF5D0B7E048D6E1407532 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +39,6 @@
 		36EF5F516A68ABE0735D348F /* MyCoolApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MyCoolApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF8E9115C39F1CE6D134FB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60CC3F141854B08267E30C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB4BF5D0B7E048D6E1407532 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -126,7 +124,6 @@
 				3194D1E02E45071B000E1D0B /* NetworkService */,
 				3194D1C92E450216000E1D0B /* Screans */,
 				3194D1C52E450126000E1D0B /* App */,
-				FB4BF5D0B7E048D6E1407532 /* ViewController.swift */,
 				60CC3F141854B08267E30C89 /* Info.plist */,
 			);
 			path = Sources;
@@ -218,7 +215,6 @@
 			files = (
 				3194D1EE2E450767000E1D0B /* LocalStorageManager.swift in Sources */,
 				3194D1EF2E450767000E1D0B /* StorageType.swift in Sources */,
-				F77CA2E3FE2502333891185D /* ViewController.swift in Sources */,
 				3194D1E12E45071B000E1D0B /* Endpoint&DTO.swift in Sources */,
 				3194D1E22E45071B000E1D0B /* HTTPMethod.swift in Sources */,
 				3194D1E32E45071B000E1D0B /* HTTPCode.swift in Sources */,

@@ -23,10 +23,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
-        let homeView = HomeStartView()
-        view.addSubview(homeView)
-        homeView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()  // растягиваем на весь экран
-        }
+        view = HomeStartView()
     }
 }
