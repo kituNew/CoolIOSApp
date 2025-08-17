@@ -3,48 +3,72 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01FA6445FC7BF6B935DAE9F9 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB80188490469E68512326F1 /* RemoteImageView.swift */; };
 		119149122E22F2DE53B3CB38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF8E9115C39F1CE6D134FB7 /* UIKit.framework */; };
-		3194D1E12E45071B000E1D0B /* Endpoint&DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1D92E45071B000E1D0B /* Endpoint&DTO.swift */; };
-		3194D1E22E45071B000E1D0B /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1D62E45071B000E1D0B /* HTTPMethod.swift */; };
-		3194D1E32E45071B000E1D0B /* HTTPCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1D52E45071B000E1D0B /* HTTPCode.swift */; };
-		3194D1E42E45071B000E1D0B /* NetworkServicingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1DD2E45071B000E1D0B /* NetworkServicingProtocol.swift */; };
-		3194D1E52E45071B000E1D0B /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1DF2E45071B000E1D0B /* RemoteImageView.swift */; };
-		3194D1E62E45071B000E1D0B /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1DA2E45071B000E1D0B /* NetworkError.swift */; };
-		3194D1E72E45071B000E1D0B /* APIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1D82E45071B000E1D0B /* APIRoutes.swift */; };
-		3194D1E82E45071B000E1D0B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1DC2E45071B000E1D0B /* NetworkService.swift */; };
-		3194D1E92E45071B000E1D0B /* PascalToCamelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1DE2E45071B000E1D0B /* PascalToCamelConverter.swift */; };
-		3194D1EE2E450767000E1D0B /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1EC2E450767000E1D0B /* LocalStorageManager.swift */; };
-		3194D1EF2E450767000E1D0B /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D1EA2E450767000E1D0B /* StorageType.swift */; };
+		1D8BDD0BCAF19326E44A837B /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F336BD542EC07C2BEAE7 /* LocalStorageManager.swift */; };
+		3194D2542E51FACF000E1D0B /* ChartMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3194D2532E51FACD000E1D0B /* ChartMarkerView.swift */; };
+		3378C366BC86C0DBDB4DC66F /* HomeStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F172649FB431ADD099E7D7D /* HomeStartView.swift */; };
+		4535CB0433F72FA25F82C5A3 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6CD347E03D51C1CBD0C5061F /* DGCharts */; };
+		4C174512E10488A6724D8A22 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90D9CED088013D631748A94 /* ProfileViewModel.swift */; };
+		510CCF245AA3654924B3BFE4 /* Endpoint&DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1740E432BB4FD19997AB8D /* Endpoint&DTO.swift */; };
+		578E705E2E302F0C3BC3DB32 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05AC18EFDDACCF848762AA3 /* HomeViewModel.swift */; };
+		587E3B67085AE3A656A1A5C8 /* HTTPCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6E175945FEC457B8BAAB70 /* HTTPCode.swift */; };
+		639D7E7324BE29A370D35FA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC914706EA499F419898865 /* SceneDelegate.swift */; };
+		67432A132050EC908B79E32E /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E1735056E6BCACDEBBB4F /* AppContainer.swift */; };
+		7739937D010226026C74D3F3 /* AlphaVantageResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454034C3A094A7C576D7033 /* AlphaVantageResponseDTO.swift */; };
+		7A5EF1CBD57459C32CB72083 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6984999E359EA3FC554BE43B /* MainTabBarController.swift */; };
+		7AFD99516C3C19CEB6072BBB /* APIRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD4E2C8FC0B7AE0623275CA /* APIRoutes.swift */; };
+		7CE90E3032A3B0102DE91A23 /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C519D09D97DF2AF44EAE4C50 /* StorageType.swift */; };
+		85AF2C96631A796D1D39BBC8 /* NetworkServicingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CCC870D7036E78808394CC /* NetworkServicingProtocol.swift */; };
+		86861F023AEA2CBCF00392B1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C8E30E52E43C3FB5694AFB /* HomeViewController.swift */; };
+		8A04ADE89DD03BF5A1F5B005 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA5E91D951969F753E771C8 /* ProfileViewController.swift */; };
+		974509F1680DC11D7A54EB5E /* AlphaVantageResponseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B5B3342A9008B72C62FC48 /* AlphaVantageResponseRequest.swift */; };
+		99EDFE0360A1BA2F23CABDD6 /* AlphaVantageResponseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820FCD17274415988E3B3EF3 /* AlphaVantageResponseEndpoint.swift */; };
+		9BB3CF9F7E38012220E8A886 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8731CA066B1B6B3308B4152F /* HTTPMethod.swift */; };
 		A24D4F22CFE98C2AAA011C40 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8894172F9F97B7C3EAB648C5 /* SnapKit */; };
+		BE1822BA071F57A0D9E0F02D /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B3A143ED676E35C3B2A231 /* Stock.swift */; };
+		CEE890D48BDFBE98A7601952 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542640BAB28955DBEF4FCEB1 /* NetworkError.swift */; };
 		E40AC0CB6C006C2453B25CC7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11ECB48E74F9E1816C0C1E10 /* Foundation.framework */; };
+		E79A24E3A9FF922D5892D47E /* PascalToCamelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B2579BEB9687AD3B40B608 /* PascalToCamelConverter.swift */; };
+		F2F9C8F386B17E10DC9BCD90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60B4E16A9988422608B1E54 /* AppDelegate.swift */; };
+		F99D0D4E3AFA56F497C7E1F7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8CE2D13D61C9D7E2BFBA62 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0454034C3A094A7C576D7033 /* AlphaVantageResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaVantageResponseDTO.swift; sourceTree = "<group>"; };
+		0C1740E432BB4FD19997AB8D /* Endpoint&DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint&DTO.swift"; sourceTree = "<group>"; };
+		0F172649FB431ADD099E7D7D /* HomeStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStartView.swift; sourceTree = "<group>"; };
 		11ECB48E74F9E1816C0C1E10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3194D1D52E45071B000E1D0B /* HTTPCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCode.swift; sourceTree = "<group>"; };
-		3194D1D62E45071B000E1D0B /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		3194D1D82E45071B000E1D0B /* APIRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoutes.swift; sourceTree = "<group>"; };
-		3194D1D92E45071B000E1D0B /* Endpoint&DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint&DTO.swift"; sourceTree = "<group>"; };
-		3194D1DA2E45071B000E1D0B /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		3194D1DC2E45071B000E1D0B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		3194D1DD2E45071B000E1D0B /* NetworkServicingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicingProtocol.swift; sourceTree = "<group>"; };
-		3194D1DE2E45071B000E1D0B /* PascalToCamelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PascalToCamelConverter.swift; sourceTree = "<group>"; };
-		3194D1DF2E45071B000E1D0B /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
-		3194D1EA2E450767000E1D0B /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
-		3194D1EC2E450767000E1D0B /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
+		1C8CE2D13D61C9D7E2BFBA62 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3194D2532E51FACD000E1D0B /* ChartMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartMarkerView.swift; sourceTree = "<group>"; };
 		36EF5F516A68ABE0735D348F /* MyCoolApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MyCoolApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BF8E9115C39F1CE6D134FB7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		60CC3F141854B08267E30C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		542640BAB28955DBEF4FCEB1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		57CCC870D7036E78808394CC /* NetworkServicingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServicingProtocol.swift; sourceTree = "<group>"; };
+		5B01F336BD542EC07C2BEAE7 /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
+		5CA5E91D951969F753E771C8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		60C8E30E52E43C3FB5694AFB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		60CC3F141854B08267E30C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6984999E359EA3FC554BE43B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		7DD4E2C8FC0B7AE0623275CA /* APIRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoutes.swift; sourceTree = "<group>"; };
+		820FCD17274415988E3B3EF3 /* AlphaVantageResponseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaVantageResponseEndpoint.swift; sourceTree = "<group>"; };
+		8731CA066B1B6B3308B4152F /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		8FC914706EA499F419898865 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		90B2579BEB9687AD3B40B608 /* PascalToCamelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PascalToCamelConverter.swift; sourceTree = "<group>"; };
+		A02E1735056E6BCACDEBBB4F /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		A05AC18EFDDACCF848762AA3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B5B5B3342A9008B72C62FC48 /* AlphaVantageResponseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaVantageResponseRequest.swift; sourceTree = "<group>"; };
+		C519D09D97DF2AF44EAE4C50 /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
+		C90D9CED088013D631748A94 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D60B4E16A9988422608B1E54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4B3A143ED676E35C3B2A231 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		FB80188490469E68512326F1 /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
+		FC6E175945FEC457B8BAAB70 /* HTTPCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		3194D1C52E450126000E1D0B /* App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = App; sourceTree = "<group>"; };
-		3194D1C92E450216000E1D0B /* Screans */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Screans; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2700C66CE9CB31BBF375640A /* Frameworks */ = {
@@ -54,59 +78,39 @@
 				119149122E22F2DE53B3CB38 /* UIKit.framework in Frameworks */,
 				E40AC0CB6C006C2453B25CC7 /* Foundation.framework in Frameworks */,
 				A24D4F22CFE98C2AAA011C40 /* SnapKit in Frameworks */,
+				4535CB0433F72FA25F82C5A3 /* DGCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3194D1D72E45071B000E1D0B /* HTTP */ = {
+		0E3E764F1B3D3489549657CD /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3194D1D52E45071B000E1D0B /* HTTPCode.swift */,
-				3194D1D62E45071B000E1D0B /* HTTPMethod.swift */,
+				60C8E30E52E43C3FB5694AFB /* HomeViewController.swift */,
 			);
-			path = HTTP;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
-		3194D1DB2E45071B000E1D0B /* Data */ = {
+		1F649D5BBF0AA6D550E56166 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3194D1D72E45071B000E1D0B /* HTTP */,
-				3194D1D82E45071B000E1D0B /* APIRoutes.swift */,
-				3194D1D92E45071B000E1D0B /* Endpoint&DTO.swift */,
-				3194D1DA2E45071B000E1D0B /* NetworkError.swift */,
+				34C62F7DA9982976CFC1DEF0 /* Model */,
+				BA9BE9A8E815FCAB8C88873A /* View */,
+				0E3E764F1B3D3489549657CD /* ViewController */,
+				C94D551A436465433CF9E32A /* ViewModel */,
 			);
-			path = Data;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		3194D1E02E45071B000E1D0B /* NetworkService */ = {
+		34C62F7DA9982976CFC1DEF0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3194D1DB2E45071B000E1D0B /* Data */,
-				3194D1DC2E45071B000E1D0B /* NetworkService.swift */,
-				3194D1DD2E45071B000E1D0B /* NetworkServicingProtocol.swift */,
-				3194D1DE2E45071B000E1D0B /* PascalToCamelConverter.swift */,
-				3194D1DF2E45071B000E1D0B /* RemoteImageView.swift */,
+				F4B3A143ED676E35C3B2A231 /* Stock.swift */,
+				FA765A966736C9AB76E3ABFE /* DTO */,
 			);
-			path = NetworkService;
-			sourceTree = "<group>";
-		};
-		3194D1EB2E450767000E1D0B /* Types */ = {
-			isa = PBXGroup;
-			children = (
-				3194D1EA2E450767000E1D0B /* StorageType.swift */,
-			);
-			path = Types;
-			sourceTree = "<group>";
-		};
-		3194D1ED2E450767000E1D0B /* DataStoring */ = {
-			isa = PBXGroup;
-			children = (
-				3194D1EB2E450767000E1D0B /* Types */,
-				3194D1EC2E450767000E1D0B /* LocalStorageManager.swift */,
-			);
-			path = DataStoring;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		48F7FA2B67B6F8AB15294A8D /* Products */ = {
@@ -117,16 +121,55 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		58CE41EECA0BC53FF80C6ECC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E4202D1847178B1260863D68 /* ViewController */,
+				7E5989137CD90A064F8CB434 /* ViewModel */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		66EB515A7B81E5217AF5CCE8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				3194D1ED2E450767000E1D0B /* DataStoring */,
-				3194D1E02E45071B000E1D0B /* NetworkService */,
-				3194D1C92E450216000E1D0B /* Screans */,
-				3194D1C52E450126000E1D0B /* App */,
 				60CC3F141854B08267E30C89 /* Info.plist */,
+				9A1C67F1BBD07F5DFE5DBDBA /* App */,
+				EA10368964BB49FC9C824AEE /* DataStoring */,
+				F18EC45B59F2E06C6A8DDB08 /* NetworkService */,
+				E9976FF31F91CE6543009D43 /* Screans */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		7E5989137CD90A064F8CB434 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C90D9CED088013D631748A94 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8774FC51EB54D4D5AADF1218 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7DD4E2C8FC0B7AE0623275CA /* APIRoutes.swift */,
+				0C1740E432BB4FD19997AB8D /* Endpoint&DTO.swift */,
+				542640BAB28955DBEF4FCEB1 /* NetworkError.swift */,
+				DDA512A28598239C84183FA5 /* HTTP */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9A1C67F1BBD07F5DFE5DBDBA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A02E1735056E6BCACDEBBB4F /* AppContainer.swift */,
+				D60B4E16A9988422608B1E54 /* AppDelegate.swift */,
+				6984999E359EA3FC554BE43B /* MainTabBarController.swift */,
+				8FC914706EA499F419898865 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		B9673215D4520823FC461B5E /* Frameworks */ = {
@@ -136,6 +179,88 @@
 				3BF8E9115C39F1CE6D134FB7 /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA9BE9A8E815FCAB8C88873A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3194D2532E51FACD000E1D0B /* ChartMarkerView.swift */,
+				0F172649FB431ADD099E7D7D /* HomeStartView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C94D551A436465433CF9E32A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A05AC18EFDDACCF848762AA3 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DDA512A28598239C84183FA5 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				FC6E175945FEC457B8BAAB70 /* HTTPCode.swift */,
+				8731CA066B1B6B3308B4152F /* HTTPMethod.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		E4202D1847178B1260863D68 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5CA5E91D951969F753E771C8 /* ProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E9976FF31F91CE6543009D43 /* Screans */ = {
+			isa = PBXGroup;
+			children = (
+				1F649D5BBF0AA6D550E56166 /* Home */,
+				58CE41EECA0BC53FF80C6ECC /* Profile */,
+			);
+			path = Screans;
+			sourceTree = "<group>";
+		};
+		EA10368964BB49FC9C824AEE /* DataStoring */ = {
+			isa = PBXGroup;
+			children = (
+				5B01F336BD542EC07C2BEAE7 /* LocalStorageManager.swift */,
+				FAEC9B0B003F65C9528965C2 /* Types */,
+			);
+			path = DataStoring;
+			sourceTree = "<group>";
+		};
+		F18EC45B59F2E06C6A8DDB08 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				1C8CE2D13D61C9D7E2BFBA62 /* NetworkService.swift */,
+				57CCC870D7036E78808394CC /* NetworkServicingProtocol.swift */,
+				90B2579BEB9687AD3B40B608 /* PascalToCamelConverter.swift */,
+				FB80188490469E68512326F1 /* RemoteImageView.swift */,
+				8774FC51EB54D4D5AADF1218 /* Data */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		FA765A966736C9AB76E3ABFE /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				0454034C3A094A7C576D7033 /* AlphaVantageResponseDTO.swift */,
+				820FCD17274415988E3B3EF3 /* AlphaVantageResponseEndpoint.swift */,
+				B5B5B3342A9008B72C62FC48 /* AlphaVantageResponseRequest.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		FAEC9B0B003F65C9528965C2 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				C519D09D97DF2AF44EAE4C50 /* StorageType.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		FD0F7573085E4F34883418F0 = {
@@ -161,13 +286,10 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				3194D1C52E450126000E1D0B /* App */,
-				3194D1C92E450216000E1D0B /* Screans */,
-			);
 			name = MyCoolApp;
 			packageProductDependencies = (
 				8894172F9F97B7C3EAB648C5 /* SnapKit */,
+				6CD347E03D51C1CBD0C5061F /* DGCharts */,
 			);
 			productName = MyCoolApp;
 			productReference = 36EF5F516A68ABE0735D348F /* MyCoolApp.app */;
@@ -198,6 +320,7 @@
 			mainGroup = FD0F7573085E4F34883418F0;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				A516BE985665FF04D1199B1F /* XCRemoteSwiftPackageReference "Charts" */,
 				64C5DD19E1E239C510F110FA /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			projectDirPath = "";
@@ -213,17 +336,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3194D1EE2E450767000E1D0B /* LocalStorageManager.swift in Sources */,
-				3194D1EF2E450767000E1D0B /* StorageType.swift in Sources */,
-				3194D1E12E45071B000E1D0B /* Endpoint&DTO.swift in Sources */,
-				3194D1E22E45071B000E1D0B /* HTTPMethod.swift in Sources */,
-				3194D1E32E45071B000E1D0B /* HTTPCode.swift in Sources */,
-				3194D1E42E45071B000E1D0B /* NetworkServicingProtocol.swift in Sources */,
-				3194D1E52E45071B000E1D0B /* RemoteImageView.swift in Sources */,
-				3194D1E62E45071B000E1D0B /* NetworkError.swift in Sources */,
-				3194D1E72E45071B000E1D0B /* APIRoutes.swift in Sources */,
-				3194D1E82E45071B000E1D0B /* NetworkService.swift in Sources */,
-				3194D1E92E45071B000E1D0B /* PascalToCamelConverter.swift in Sources */,
+				7AFD99516C3C19CEB6072BBB /* APIRoutes.swift in Sources */,
+				7739937D010226026C74D3F3 /* AlphaVantageResponseDTO.swift in Sources */,
+				99EDFE0360A1BA2F23CABDD6 /* AlphaVantageResponseEndpoint.swift in Sources */,
+				974509F1680DC11D7A54EB5E /* AlphaVantageResponseRequest.swift in Sources */,
+				67432A132050EC908B79E32E /* AppContainer.swift in Sources */,
+				F2F9C8F386B17E10DC9BCD90 /* AppDelegate.swift in Sources */,
+				510CCF245AA3654924B3BFE4 /* Endpoint&DTO.swift in Sources */,
+				587E3B67085AE3A656A1A5C8 /* HTTPCode.swift in Sources */,
+				9BB3CF9F7E38012220E8A886 /* HTTPMethod.swift in Sources */,
+				3378C366BC86C0DBDB4DC66F /* HomeStartView.swift in Sources */,
+				86861F023AEA2CBCF00392B1 /* HomeViewController.swift in Sources */,
+				578E705E2E302F0C3BC3DB32 /* HomeViewModel.swift in Sources */,
+				1D8BDD0BCAF19326E44A837B /* LocalStorageManager.swift in Sources */,
+				7A5EF1CBD57459C32CB72083 /* MainTabBarController.swift in Sources */,
+				CEE890D48BDFBE98A7601952 /* NetworkError.swift in Sources */,
+				F99D0D4E3AFA56F497C7E1F7 /* NetworkService.swift in Sources */,
+				85AF2C96631A796D1D39BBC8 /* NetworkServicingProtocol.swift in Sources */,
+				E79A24E3A9FF922D5892D47E /* PascalToCamelConverter.swift in Sources */,
+				8A04ADE89DD03BF5A1F5B005 /* ProfileViewController.swift in Sources */,
+				4C174512E10488A6724D8A22 /* ProfileViewModel.swift in Sources */,
+				3194D2542E51FACF000E1D0B /* ChartMarkerView.swift in Sources */,
+				01FA6445FC7BF6B935DAE9F9 /* RemoteImageView.swift in Sources */,
+				639D7E7324BE29A370D35FA8 /* SceneDelegate.swift in Sources */,
+				BE1822BA071F57A0D9E0F02D /* Stock.swift in Sources */,
+				7CE90E3032A3B0102DE91A23 /* StorageType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,9 +552,22 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		A516BE985665FF04D1199B1F /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6CD347E03D51C1CBD0C5061F /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A516BE985665FF04D1199B1F /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
 		8894172F9F97B7C3EAB648C5 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 64C5DD19E1E239C510F110FA /* XCRemoteSwiftPackageReference "SnapKit" */;

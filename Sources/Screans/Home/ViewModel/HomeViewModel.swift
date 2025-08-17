@@ -12,11 +12,6 @@ class HomeViewModel {
         
     init(networkService: NetworkService) {
         self.networkService = networkService
-        Task {
-            await fetchStocks(symbol: "MSFT", interval: "5min") { result in
-                print(result)
-            }
-        }
     }
     
     func fetchStocks(symbol: String, interval: String, completion: @escaping (Result<Stock?, Error>) -> Void) async {

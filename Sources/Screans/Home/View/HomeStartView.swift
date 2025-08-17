@@ -7,23 +7,29 @@
 
 import UIKit
 import SnapKit
+import DGCharts
 
 final class HomeStartView: UIView {
-    private let label = UILabel()
-    
+    public let chartView: LineChartView = {
+        let chartView = LineChartView()
+        chartView.backgroundColor = .systemBackground
+        chartView.leftAxis.enabled = true
+        chartView.rightAxis.enabled = false
+        chartView.xAxis.labelPosition = .bottom
+        chartView.legend.enabled = false
+        return chartView
+    }()
+        
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .systemBackground
         
-        addSubview(label)
-        label.text = "Hello!"
-
-        label.textColor = .black
-        label.font = .systemFont(ofSize: 20)
-        label.textAlignment = .center
-
-        label.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        addSubview(chartView)
+                
+        chartView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(self).multipliedBy(0.5)
         }
     }
     
