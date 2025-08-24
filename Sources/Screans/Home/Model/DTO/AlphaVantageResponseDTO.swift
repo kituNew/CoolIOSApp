@@ -5,6 +5,10 @@
 //  Created by Zaitsev Vladislav on 16.08.2025.
 //
 
+// Определим ключ для userInfo
+extension CodingUserInfoKey {
+    static let timeSeriesInterval = CodingUserInfoKey(rawValue: "timeSeriesInterval")!
+}
 
 struct AlphaVantageResponseDTO: ResponseDTO {
     let metaData: MetaDataDTO?
@@ -12,7 +16,64 @@ struct AlphaVantageResponseDTO: ResponseDTO {
 
     private enum CodingKeys: String, CodingKey {
         case metaData = "Meta Data"
-        case timeSeries = "Time Series (5min)"
+    }
+
+    init(from decoder: Decoder) throws {
+        // Сначала декодируем metaData как обычно
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.metaData = try container.decodeIfPresent(MetaDataDTO.self, forKey: .metaData)
+
+        // Получаем интервал из userInfo
+        guard let interval = decoder.userInfo[.timeSeriesInterval] as? String else {
+            let context = DecodingError.Context(
+                codingPath: decoder.codingPath,
+                debugDescription: "Missing 'timeSeriesInterval' in decoder.userInfo"
+            )
+            throw DecodingError.dataCorrupted(context)
+        }
+
+        let timeSeriesKey = "Time Series (\(interval))"
+
+        // Работаем с верхним уровнем JSON (все ключи)
+        let topContainer = try decoder.container(keyedBy: DynamicKey.self)
+
+        // Проверяем, есть ли такой ключ
+        if let key = DynamicKey(stringValue: timeSeriesKey),
+           topContainer.allKeys.contains(key) {
+            let timeSeriesContainer = try topContainer.nestedContainer(keyedBy: DynamicKey.self, forKey: key)
+
+            var candles: [String: CandleDTO] = [:]
+            for timestampKey in timeSeriesContainer.allKeys {
+                let candle = try timeSeriesContainer.decode(CandleDTO.self, forKey: timestampKey)
+                candles[timestampKey.stringValue] = candle
+            }
+            self.timeSeries = candles
+        } else {
+            self.timeSeries = nil
+        }
+    }
+}
+
+private struct DynamicKey: CodingKey, Equatable {
+    var stringValue: String
+    var intValue: Int?
+
+    init?(stringValue: String) {
+        self.stringValue = stringValue
+        self.intValue = nil
+    }
+
+    init?(intValue: Int) {
+        self.stringValue = "\(intValue)"
+        self.intValue = intValue
+    }
+
+    // MARK: - Equatable
+    static func == (lhs: DynamicKey, rhs: DynamicKey) -> Bool {
+        if lhs.intValue != nil, rhs.intValue != nil {
+            return lhs.intValue == rhs.intValue
+        }
+        return lhs.stringValue == rhs.stringValue
     }
 }
 

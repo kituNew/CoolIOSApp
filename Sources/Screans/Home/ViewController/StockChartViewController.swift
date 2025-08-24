@@ -9,11 +9,16 @@ import UIKit
 import SnapKit
 import DGCharts
 
-class HomeViewController: UIViewController {
-    private let viewModel: HomeViewModel
-    private let chartView = HomeStartView()
+class StockChartViewController: UIViewController {
+    private let viewModel: StockChartViewModel
+    private lazy var chartView = StockChartView()
+    private lazy var intervalSwitcherView = IntervalSwitcherView(frame: .zero) { [weak self] interval in
+        guard let self = self else { return }
+        self.loadStockData(currentInterval: interval)
+    }
     
-    init(viewModel: HomeViewModel) {
+    
+    init(viewModel: StockChartViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,22 +29,44 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = chartView
-        loadStockData()
+        setup()
+        loadStockData(currentInterval: "1min")
     }
     
-    private func loadStockData() {
+    private func loadStockData(currentInterval: String) {
         Task {
-            await viewModel.fetchStocks(symbol: "MSFT", interval: "5min") { [weak self] result in
+            await viewModel.fetchStocks(symbol: "AAPL", interval: currentInterval) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case .success(let stock):
-                    guard let stock = stock else { return }
+                    guard let stock = stock else {
+                        print("nil")
+                        return
+                    }
                     self.updateChart(with: stock)
                 case .failure(let error):
                     print("Ошибка: \(error)")
                 }
             }
+        }
+    }
+    
+    private func setup() {
+        view.addSubview(chartView)
+        view.addSubview(intervalSwitcherView)
+        
+        chartView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.leading.trailing.equalToSuperview().offset(16)
+            make.height.equalTo(view).multipliedBy(0.4)
+        }
+        
+        intervalSwitcherView.snp.makeConstraints { make in
+            make.top.equalTo(chartView.snp.bottom).offset(4)
+            make.leading.trailing.equalToSuperview().inset(40)
+            make.centerX.equalToSuperview()
+            make.width.lessThanOrEqualToSuperview()
+            make.height.equalTo(40)
         }
     }
     
@@ -63,7 +90,8 @@ class HomeViewController: UIViewController {
         set.setColor(.systemBlue)
         set.lineWidth = 2.0
         set.drawCirclesEnabled = false
-        set.mode = .cubicBezier // плавная кривая
+        set.mode = .cubicBezier
+        set.drawValuesEnabled = false
         
         // Применяем данные к графику
         let data = LineChartData(dataSet: set)
@@ -73,22 +101,7 @@ class HomeViewController: UIViewController {
         let labels = candles.map {
             $0.timestamp.formatted(date: .omitted, time: .shortened)
         }
-        
         chartView.chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: labels)
-        chartView.chartView.xAxis.granularity = 1
-        chartView.chartView.xAxis.labelRotationAngle = -45
-        chartView.chartView.xAxis.wordWrapEnabled = true
-        chartView.chartView.xAxis.avoidFirstLastClippingEnabled = true
-        chartView.chartView.rightAxis.enabled = false
-        
-//        chartView.chartView.leftAxis.granularity = 0.5 // Минимальный шаг (например, 0.5 рубля/доллара)
-
-        // Автоматически рассчитать шаг, но контролировать количество меток
-        chartView.chartView.leftAxis.setLabelCount(6, force: true)
-        
-        set.drawValuesEnabled = false // 🔥 Главное: не показывать значения по умолчанию
-        chartView.chartView.highlightPerTapEnabled = true // Разрешить подсветку при тапе
-        chartView.chartView.highlightPerDragEnabled = true
-        chartView.chartView.marker = ChartMarkerView(frame: CGRect(x: 0, y: 0, width: 60, height: 30))
+        chartView.chartView.notifyDataSetChanged()
     }
 }

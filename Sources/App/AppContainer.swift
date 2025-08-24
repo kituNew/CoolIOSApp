@@ -9,9 +9,9 @@ class AppContainer {
     
     lazy var networkService = NetworkService()
     
-    func makeHomeViewController() -> HomeViewController {
-        let viewModel = HomeViewModel(networkService: networkService)
-        return HomeViewController(viewModel: viewModel)
+    func makeHomeViewController() -> StockChartViewController {
+        let viewModel = StockChartViewModel(networkService: networkService)
+        return StockChartViewController(viewModel: viewModel)
     }
     
     func makeProfileViewController() -> ProfileViewController {

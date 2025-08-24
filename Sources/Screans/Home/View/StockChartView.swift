@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import DGCharts
 
-final class HomeStartView: UIView {
+final class StockChartView: UIView {
     public let chartView: LineChartView = {
         let chartView = LineChartView()
         chartView.backgroundColor = .systemBackground
@@ -17,6 +17,19 @@ final class HomeStartView: UIView {
         chartView.rightAxis.enabled = false
         chartView.xAxis.labelPosition = .bottom
         chartView.legend.enabled = false
+        
+        chartView.xAxis.granularity = 1
+        chartView.xAxis.labelRotationAngle = -45
+        chartView.xAxis.wordWrapEnabled = true
+        chartView.rightAxis.enabled = false
+        chartView.xAxis.setLabelCount(5, force: false)
+        chartView.extraBottomOffset = 40
+        chartView.xAxis.labelFont = .systemFont(ofSize: 11, weight: .semibold)
+        chartView.xAxis.labelTextColor = .darkText
+        chartView.leftAxis.setLabelCount(6, force: true)
+        chartView.highlightPerTapEnabled = true
+        chartView.highlightPerDragEnabled = true
+        chartView.marker = ChartMarkerView(frame: CGRect(x: 0, y: 0, width: 60, height: 30))
         return chartView
     }()
         
@@ -27,9 +40,7 @@ final class HomeStartView: UIView {
         addSubview(chartView)
                 
         chartView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide.snp.top)
-            make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(self).multipliedBy(0.5)
+            make.top.leading.trailing.bottom.equalToSuperview()
         }
     }
     

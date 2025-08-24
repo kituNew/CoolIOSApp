@@ -11,6 +11,7 @@ import UIKit
 final class NetworkService: NetworkServicing {
     private let session: URLSession
     private let localStorageManager: LocalStorageManager
+    public let decoder = JSONDecoder()
 
     init(session: URLSession = .shared, localStorageManager: LocalStorageManager = LocalStorageManager()) {
         self.session = session
@@ -107,7 +108,7 @@ final class NetworkService: NetworkServicing {
     private func parseResponse<Response: Decodable>(
         data: Data
     ) throws -> Response {
-        return try JSONDecoder().decode(Response.self, from: data)
+        return try decoder.decode(Response.self, from: data)
     }
     
     func downloadImage(from url: URL) async throws -> UIImage {
